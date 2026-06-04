@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kalkulator Harga By TMS_genahelik — hitung harga jual dan keuntungan sembako dari harga beli dan margin %. Gratis, tanpa simpan data.">
+  <meta name="author" content="TMS_genahelik">
+  <title>Kalkulator Harga By TMS_genahelik</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <p class="brand">TMS_genahelik</p>
+      <h1>Kalkulator Harga</h1>
+      <p class="subtitle">Margin dihitung dari harga jual (bukan dari harga beli). Data tidak dikirim ke server mana pun.</p>
+    </header>
+
+    <form id="form-kalkulator" class="form" novalidate>
+      <div class="field">
+        <label for="nama-barang">Nama barang</label>
+        <input
+          type="text"
+          id="nama-barang"
+          name="namaBarang"
+          placeholder="Contoh: Beras 5 kg"
+          autocomplete="off"
+        >
+      </div>
+
+      <div class="field">
+        <label for="harga-beli">Harga beli (Rp)</label>
+        <input
+          type="number"
+          id="harga-beli"
+          name="hargaBeli"
+          inputmode="decimal"
+          min="0"
+          step="any"
+          placeholder="10000"
+          required
+        >
+      </div>
+
+      <div class="field">
+        <label for="margin">Margin (%)</label>
+        <input
+          type="number"
+          id="margin"
+          name="margin"
+          inputmode="decimal"
+          min="0"
+          max="99"
+          step="any"
+          placeholder="20"
+          required
+        >
+        <span class="hint">0–99%. Margin 20% artinya 20% dari harga jual adalah untung.</span>
+      </div>
+
+      <p id="pesan-error" class="error" role="alert" hidden></p>
+
+      <button type="submit" class="btn-primary">Hitung</button>
+    </form>
+
+    <section id="hasil" class="hasil" hidden aria-live="polite">
+      <p id="hasil-label" class="hasil-label"></p>
+      <div class="hasil-row utama">
+        <span class="hasil-judul">Harga jual</span>
+        <span id="harga-jual" class="hasil-nilai"></span>
+      </div>
+      <div class="hasil-row">
+        <span class="hasil-judul">Keuntungan</span>
+        <span id="keuntungan" class="hasil-nilai keuntungan"></span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Kalkulator Harga By <strong>TMS_genahelik</strong></p>
+      <p class="footer-note">Open source · Perhitungan di perangkat Anda</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
