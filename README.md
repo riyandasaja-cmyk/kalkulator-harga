@@ -2,14 +2,6 @@
 
 Kalkulator harga jual sembako berbasis web — ringan, gratis, dan aman dipakai di HP maupun komputer. Hitung **harga jual** dan **keuntungan** dari harga beli dan margin % (margin dihitung dari harga jual).
 
-## Demo
-
-Setelah di-deploy ke GitHub Pages, URL demo akan berbentuk:
-
-`https://<username-github>.github.io/<nama-repo>/`
-
-Ganti `<username-github>` dan `<nama-repo>` sesuai repositori Anda.
-
 ## Fitur
 
 - Input: nama barang (opsional), harga beli, margin %
